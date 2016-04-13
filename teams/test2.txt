@@ -1,0 +1,16 @@
+	{
+		"name"		"test2"
+		"flag"		"ca"
+		"logo"		""
+		"matchtext"		""
+		"players"
+		{
+			"STEAM_0:1:xxxxxxxxx"	""
+			"STEAM_0:0:xxxxxxxxx"	""
+			"STEAM_0:1:xxxxxxxxx"	""
+			"STEAM_0:0:xxxxxxxxx"	""
+			"STEAM_0:0:xxxxxxxxx"	""
+			"STEAM_0:0:xxxxxxxxx"	""
+			"STEAM_0:0:xxxxxxxxx"	""
+		}
+	}

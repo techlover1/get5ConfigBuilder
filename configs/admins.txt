@@ -1,0 +1,5 @@
+		{
+			"STEAM_0:1:xxxxxxxxx"	""
+			"STEAM_0:1:xxxxxxxxx"	""
+			"STEAM_1:1:xxxxxxxxx"	""
+		}
