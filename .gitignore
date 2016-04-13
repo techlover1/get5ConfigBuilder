@@ -1,1 +1,6 @@
 *.cfg
+test.py
+.c9
+.git
+__pycache__
+old.py
