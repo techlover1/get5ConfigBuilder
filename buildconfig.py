@@ -66,17 +66,17 @@ class buildconfig():
 
     def teamblocks(self):
         # Team 1
-        team1filename = 'test.txt'
+        team1filename = userinput.team1filename
         fw.write('\t"team1"\n')
-        team1file = open("teams/"+team1filename)
+        team1file = open("teams/"+team1filename+".txt")
         team1 = team1file.read()
         fw.write(team1)
         team1file.close
         
         # Team 2
-        team2filename = 'test2.txt'
+        team2filename = userinput.team2filename
         fw.write('\n\t"team2"\n')
-        team2file = open("teams/"+team2filename)
+        team2file = open("teams/"+team2filename+".txt")
         team2 = team2file.read()
         fw.write(team2)
         team2file.close

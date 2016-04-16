@@ -1,3 +1,4 @@
+import os.path
 class userinput():
     # Define variables
     matchid = 'default'
@@ -6,10 +7,15 @@ class userinput():
     skipveto = 'n'
     sidetype = ''
     playersperteam = 0
-    
+    team1filename = 'test'
+    team2filename = 'test2'
+
+
     def __init__(self):
         self.matchidf()
         self.match_titlef()
+        self.team1()
+        self.team2()
         self.maps_to_winf()
         self.skipvetof()
         self.sidetypef()
@@ -32,6 +38,30 @@ class userinput():
         print("Match Title:", userinput.match_title, "\n")
 
 
+    def team1(self):
+        
+        userinput.team1filename = input("What is the filename for team1? (.txt will be added automatically) ")
+        team1fullpath = './teams/' + userinput.team1filename + '.txt'
+        
+        if os.path.isfile(team1fullpath):
+            return
+        else:
+            print("Invalid file. Try again.")
+            self.team1()
+            
+            
+    def team2(self):
+        
+        userinput.team2filename = input("What is the filename for team2? (.txt will be added automatically) ")
+        team2fullpath = './teams/' + userinput.team2filename + '.txt'
+        
+        if os.path.isfile(team2fullpath):
+            return
+        else:
+            print("Invalid file. Try again.")
+            self.team2()
+
+
     def maps_to_winf(self):
         
         try:
@@ -51,9 +81,9 @@ class userinput():
             print("Doing the veto in game\n")
         elif userinput.skipveto == 'n':
             print("Not doing the veto in game\n")
-        elif userinput.skipveto != 'y' and skipveto != 'n':
+        elif userinput.skipveto != 'y' and userinput.skipveto != 'n':
             print("Answer 'y' or 'n'")
-            self.skipveto()
+            self.skipvetof()
 
 
     def sidetypef(self):
@@ -76,7 +106,7 @@ class userinput():
             and userinput.sidetype != '2' and userinput.sidetype != '3':
                 
             print('Choose 1, 2, or 3')
-            self.sidetype()
+            self.sidetypef()
 
 
     def playersperteamf(self):
